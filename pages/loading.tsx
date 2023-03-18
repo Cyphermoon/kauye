@@ -8,7 +8,7 @@ const loading = () => {
     return (
         <ScreenContainer>
             <PageHead title='Loading' />
-            <StartupScreen>
+            <StartupScreen >
                 <Image src={"/asset/spinner.svg"} alt="loading spinner" width={210} height={210} />
             </StartupScreen>
         </ScreenContainer>

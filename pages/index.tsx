@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <ScreenContainer>
       <PageHead title='Home' />
-      <StartupScreen>
+      <StartupScreen href="/loading">
         <Logo />
       </StartupScreen>
     </ScreenContainer>

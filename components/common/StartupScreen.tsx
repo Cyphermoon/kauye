@@ -5,9 +5,10 @@ import Screen from './Screen'
 
 interface Props {
     children: React.ReactNode
+    href?: string
 }
 
-const StartupScreen = ({ children }: Props) => {
+const StartupScreen = ({ children, href }: Props) => {
     return (
         <Screen className='flex flex-col justify-center items-center overflow-clip relative background-element'>
             <figure className='-mt-20' >
@@ -15,8 +16,8 @@ const StartupScreen = ({ children }: Props) => {
             </figure>
 
             <div className='space-y-8 text-center absolute bottom-10'>
-                <span className='text-sm font-semibold'>Powered by Kauye</span>
-                <Link href={"/loading"} className='text-xs text-[#59ADFF]'>Continue</Link>
+                <span className='text-sm font-medium'>Powered by Kauye</span>
+                <Link href={href ? href : "#"} className='text-xs text-[#59ADFF]'>Continue</Link>
             </div>
 
             {/* presentation image */}
