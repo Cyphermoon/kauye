@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+    span,a{
+        display:block;
+    }
+}
+
+@layer components{
+    .background-element::before{
+        content: "";
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height: 100%;
+        background-image: 
+            url("/asset/rectangle_left.svg"), 
+            url("/asset/rectangle_right.svg");
+        background-repeat: no-repeat no-repeat;
+        background-position-x:0%, 100%;
+        background-position-y:77%, 0%;
+    }
+}
