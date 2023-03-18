@@ -9,7 +9,7 @@ import React from 'react'
 const signup = () => {
     return (
         <ScreenContainer>
-            <PageHead title='Loading' />
+            <PageHead title='Sign Up' />
             <Screen className='px-6 sign-up relative' >
                 <div className='text-center flex flex-col items-center space-y-1 mt-8'>
                     <Image src="/asset/logo_stripped.svg" alt='kauye logo' width={35} height={50} />
@@ -25,10 +25,10 @@ const signup = () => {
                 </div>
                 <div className='space-x-2'>
                     <span className='inline-block text-xs'>Already Have an account</span>
-                    <Link className='inline-block text-primary text-xs' href="signin">Sign in</Link>
+                    <Link className='inline-block text-primary text-xs' href="login">Sign in</Link>
                 </div>
 
-                <Link href={"signin"} className='py-1 mx-6 absolute bottom-16 left-0 right-0 bg-primary text-center text-primary-50 rounded-3xl'>Sign up</Link>
+                <Link href={"login"} className='py-1 mx-6 absolute bottom-16 left-0 right-0 bg-primary text-center text-primary-50 rounded-3xl'>Sign up</Link>
             </Screen>
         </ScreenContainer>
     )

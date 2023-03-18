@@ -6,6 +6,9 @@
     span,a{
         display:block;
     }
+    a{
+        @apply text-primary
+    }
 }
 
 @layer components{
