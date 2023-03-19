@@ -27,7 +27,7 @@ const Verify = () => {
         <ScreenContainer>
             <PageHead title='Sign Up' />
             <Screen className='px-6 relative splash-bg' >
-                <Header href='/login' />
+                <Header href='/signup' />
 
                 <div className='text-center mt-10 space-y-14 flex flex-col items-center'>
                     <p className='text-[#4A515E] text-xs'>To confirm your identity, please verify your account, enter the verification code sent to xxxx@gmail.com</p>
