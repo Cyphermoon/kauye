@@ -39,4 +39,7 @@
         background-position-y:100%;
         background-size: cover 100%;
     }
+    .gradient-bg{
+        background: linear-gradient(170.28deg, #FFFFFF -9.44%, #F2F2F2 100%);
+    }
 }
