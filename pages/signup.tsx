@@ -6,11 +6,11 @@ import Link from 'next/link'
 import React from 'react'
 
 
-const signup = () => {
+const SignUp = () => {
     return (
         <ScreenContainer>
             <PageHead title='Sign Up' />
-            <Screen className='px-6 sign-up relative' >
+            <Screen className='px-6 relative splash-bg' >
                 <div className='text-center flex flex-col items-center space-y-1 mt-8'>
                     <Image src="/asset/logo_stripped.svg" alt='kauye logo' width={35} height={50} />
                     <h3 className='text-base font-semibold text-[#333942]'>Create Account</h3>
@@ -34,4 +34,4 @@ const signup = () => {
     )
 }
 
-export default signup
+export default SignUp

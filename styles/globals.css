@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base{
+    body{
+        font-family: 'Montserrat', sans-serif;
+    }
+    
     span,a{
         display:block;
     }
@@ -26,7 +30,7 @@
         background-position-x:0%, 100%;
         background-position-y:77%, 0%;
     }
-    .sign-up{
+    .splash-bg{
         content: "";
         position: absolute;
         top:0;
@@ -42,4 +46,5 @@
     .gradient-bg{
         background: linear-gradient(170.28deg, #FFFFFF -9.44%, #F2F2F2 100%);
     }
+
 }
