@@ -7,17 +7,21 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { IoIosArrowBack } from 'react-icons/io'
 
+const Header = () => (
+    <div className='border-b border-[#EBECEF] py-2  flex items-center'>
+        <Link href={"login"}>
+            <IoIosArrowBack color='#788396' width={8} height={16} />
+        </Link>
+        <span className='text-center text-[#333942] text-sm mx-auto'>Verify Account</span>
+    </div>
+)
+
 const Verify = () => {
     return (
         <ScreenContainer>
             <PageHead title='Sign Up' />
             <Screen className='px-6 relative splash-bg' >
-                <div className='border-b border-[#EBECEF] py-2  flex items-center'>
-                    <Link href={"login"}>
-                        <IoIosArrowBack color='#788396' width={8} height={16} />
-                    </Link>
-                    <span className='text-center text-[#333942] text-sm mx-auto'>Verify Account</span>
-                </div>
+                <Header />
 
                 <div className='text-center mt-10 space-y-14 flex flex-col items-center'>
                     <p className='text-[#4A515E] text-xs'>To confirm your identity, please verify your account, enter the verification code sent to xxxx@gmail.com</p>
