@@ -28,8 +28,8 @@ export const Input = ({ placeholder, className, type = "text" }: inputProps) => 
 
 export const Select = ({ className }: SelectProps) => {
     return (
-        <select id="countries" className={`bg-[#21394205] text-left border border-gray-100 text-[#333942] text-opacity-60 text-sm rounded-md focus:ring-gray-400 focus:border-gray-400 outline-none block w-full p-3 h-full ${className} `}>
-            <option selected>+234 -NGN</option>
+        <select defaultValue={"NG"} id="countries" className={`bg-[#21394205] text-left border border-gray-100 text-[#333942] text-opacity-60 text-sm rounded-md focus:ring-gray-400 focus:border-gray-400 outline-none block w-full p-3 h-full ${className} `}>
+            <option value="NG">+234 -NGN</option>
             <option value="US">+1 - US</option>
             <option value="FR">+33 - FR</option>
             <option value="DE">+49 - DE</option>

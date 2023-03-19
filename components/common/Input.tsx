@@ -8,14 +8,18 @@ interface inputProps {
     className?: string
     showSelector?: boolean
     placeholder: string
+    handleInputChange?: Function
 }
 
 
-export const Input = ({ type, className, placeholder, showSelector = false }: inputProps) => {
+export const Input = ({ type, className, placeholder, handleInputChange, showSelector = false }: inputProps) => {
     const [value, setValue] = useState<string>("");
 
     const handleChange = (value: string) => {
         setValue(value)
+
+        if (handleInputChange)
+            handleInputChange(value)
     }
 
     return (
