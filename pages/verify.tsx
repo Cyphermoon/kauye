@@ -1,43 +1,11 @@
+import BottomButton from '@/components/common/BottomButton'
+import { Input } from '@/components/common/Input'
 import PageHead from '@/components/common/PageHead'
 import Screen from '@/components/common/Screen'
 import ScreenContainer from '@/components/common/ScreenContainer'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
 import { IoIosArrowBack } from 'react-icons/io'
-import { BsCheckLg } from 'react-icons/bs'
-import { FaTimesCircle } from 'react-icons/fa'
-import BottomButton from '@/components/common/BottomButton'
-
-interface inputProps {
-    type?: string
-    className?: string
-    placeholder: string
-}
-
-const Input = ({ type, className, placeholder, }: inputProps) => {
-    const [value, setValue] = useState<string>("");
-
-    const handleChange = (value: string) => {
-        setValue(value)
-    }
-
-    return (
-        <div className={`flex p-3 bg-[#21394205]  border border-[#959EAC] items-center focus-within:border-2 focus-within:border-gray-400 rounded-full ${className} `}>
-            <input
-                className='grow outline-none bg-transparent placeholder:text-gray-900'
-                type={type}
-                value={value}
-                onChange={(e) => handleChange(e.target.value)}
-                placeholder={placeholder} />
-
-            {value && <BsCheckLg className='text-green-700 bg-green-200 p-1 rounded-full w-[22px] h-[22px]' />}
-
-            {!value && <FaTimesCircle className='text-red-700 w-[22px] h-[22px]' />}
-
-        </div>
-    )
-}
 
 const Verify = () => {
     return (
