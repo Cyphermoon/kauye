@@ -13,7 +13,7 @@ const SignUp = () => {
         <ScreenContainer>
             <PageHead title='Sign In' />
             <Screen className='px-6 relative gradient-bg' >
-                <Header title='sign up' href='/login' />
+                <Header title='sign up' href='/login' urlLabel='Sign In' />
 
                 <form action="" className="space-y-4 mt-12">
                     <p className='text-base font-normal text-[#131313] text-left mb-9'>Enter your username or email address</p>
@@ -35,7 +35,7 @@ const SignUp = () => {
                     </div>
                 </form>
 
-                <Link href={"verify"} className='py-8 px-6 absolute bottom-0 left-0 right-0 bg-primary flex justify-between text-primary-50'>
+                <Link href={"login"} className='py-8 px-6 absolute bottom-0 left-0 right-0 bg-primary flex justify-between text-primary-50'>
                     Sign up
                     <Image alt="line arrow" src="/asset/line.svg" width={123} height={24} />
                 </Link>

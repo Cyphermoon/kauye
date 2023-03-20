@@ -1,52 +1,78 @@
-import Breadcrumbs from '@/components/common/BreadCrumb'
 import PageHead from '@/components/common/PageHead'
-import Screen from '@/components/common/Screen'
 import ScreenContainer from '@/components/common/ScreenContainer'
-import Image from 'next/image'
-import Link from 'next/link'
+import WelcomeScreen from '@/components/common/WelcomeScreen'
+import { Swiper, SwiperSlide } from 'swiper/react'
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-interface headerProps {
-    title: string
-}
-
-const items = [
-    { label: 'Twitter', path: 'https://twitter.com/moon_cypher' },
-    { label: 'Insta', path: '#' },
-    { label: 'Faceb.', path: '#' },
-    { label: 'Git.', path: 'https://github.com/Cyphermoon' },
-];
-
-const Header = ({ title }: headerProps) => {
-    return (
-        <div className='space-y-8'>
-            <h2 className='text-[48px] font-bold leading-10 uppercase'>{title}</h2>
-            <p>
-                Kauye is an ever-expanding ecosystem of
-                interconnected apps and services, built for a
-                decentralised future.
-            </p>
-        </div>
-    )
-}
-
+import { Autoplay, Navigation, Pagination } from 'swiper'
+import Screen from '@/components/common/Screen'
+import { useRef, useState } from 'react'
 
 
 const Welcome = () => {
+    const [sliderEnd, setSliderEnd] = useState<boolean>()
+    const progressCircle = useRef<SVGSVGElement>(null);
+    const progressContent = useRef<HTMLSpanElement>(null);
+
+    const onAutoplayTimeLeft = (s: any, time: number, progress: number) => {
+        if (progressCircle.current && progressContent.current) {
+            progressCircle?.current.style.setProperty('--progress', (1 - progress).toString());
+            progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+        }
+
+    };
     return (
         <ScreenContainer>
-            <PageHead title='Sign In' />
-            <Screen className='px-6 relative gradient-bg text-left' >
-                <Link href={"signup"} className="flex justify-end mt-5 mb-8 text-right">Sign Up</Link>
-                <Header title="community Driven." />
+            <PageHead title='Welcome - KauyeLite' />
+            {!sliderEnd &&
+                <Screen className='px-6 relative gradient-bg text-left' >
+                    <Swiper
+                        spaceBetween={0}
+                        centeredSlides={true}
+                        onReachEnd={(swiper) => setSliderEnd(true)}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                            stopOnLastSlide: true
+                        }}
+                        pagination={{
+                            clickable: true,
+                        }}
 
-                <figure className='flex flex-col space-y-4 items-start mt-10'>
-                    <Image src={"/asset/bui.svg"} role="presentation" alt='banner' width={349} height={145} />
-                    <Image src={"/asset/din.svg"} className="-ml-3 inline-block" role="presentation" alt='banner' width={349} height={145} />
-                </figure>
+                        modules={[Autoplay, Pagination]}
+                        onAutoplayTimeLeft={onAutoplayTimeLeft}
+                        className="mySwiper"
+                    >
+                        <SwiperSlide>
+                            <WelcomeScreen title='community driven.' />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <WelcomeScreen title='Customer Focused.' />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <WelcomeScreen title='Fast Services.' />
+                        </SwiperSlide>
+                        {!sliderEnd ?
+                            <div className="autoplay-progress" slot="container-end">
+                                <svg viewBox="0 0 48 48" ref={progressCircle}>
+                                    <circle className='p-1' cx="24" cy="24" r="20"></circle>
+                                </svg>
+                                <span ref={progressContent}></span>
+                            </div> : null}
 
+                    </Swiper>
+                </Screen>}
 
-                <Breadcrumbs items={items} />
-            </Screen>
+            {sliderEnd &&
+                <Screen className='px-6 relative gradient-bg text-left'>
+                    <WelcomeScreen title='Request Delivery.' isLast />
+                </Screen>
+            }
+
         </ScreenContainer>
     )
 }

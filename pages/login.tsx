@@ -15,7 +15,7 @@ const SignUp = () => {
         <ScreenContainer>
             <PageHead title='Sign In' />
             <Screen className='px-6 relative gradient-bg' >
-                <Header title="Sign in" href="/signup" />
+                <Header title="Sign in" href="/signup" urlLabel='Sign Up' />
 
                 <div className='flex items-center justify-between mt-12'>
                     <SignInOption
@@ -37,7 +37,7 @@ const SignUp = () => {
                 </form>
 
                 <Link href={"verify"} className='py-8 px-6 absolute bottom-0 left-0 right-0 bg-primary flex justify-between text-primary-50'>
-                    Sign up
+                    Login
                     <Image alt="line arrow" src="/asset/line.svg" width={123} height={24} />
                 </Link>
             </Screen>

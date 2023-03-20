@@ -15,7 +15,7 @@ const Breadcrumbs = ({ items, className }: BreadcrumbsProps) => {
 
 
     return (
-        <nav className={`flex space-x-1 ${className} absolute bottom-8 left-6`}>
+        <nav className={`flex space-x-1 ${className} absolute bottom-2 left-6`}>
             {items.map((item, index) => {
                 const isLast = index === items.length - 1;
 
