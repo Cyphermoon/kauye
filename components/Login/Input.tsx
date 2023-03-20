@@ -11,7 +11,7 @@ const Input = ({ placeholder, id, className, label, type = "text" }: inputProps)
     return (
         <fieldset
             className={`flex p-3 bg-[#21394205]  border border-gray-100 items-center focus-within:border-2 
-        focus-within:border-black rounded-md justify-start group  ${isEmpty() ? "border-red-600 focus-within:border-red-600" : null} ${className}`}>
+             focus-within:border-black rounded-md justify-start group  ${isEmpty() ? "border-red-600 focus-within:border-red-600" : null} ${className}`}>
             <legend className={`px-2 items-start hidden mr-auto text-[10px] group-focus-within:inline-block ${isEmpty() ? "text-red-600" : null}`}>
                 {label}
             </legend>

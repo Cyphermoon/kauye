@@ -10,7 +10,7 @@ const Loading = () => {
 
     useEffect(() => {
         const timeout = setTimeout(() => {
-            route.push("/signup")
+            route.push("/old-signup")
         }, 2000)
 
         return () => {
@@ -21,7 +21,7 @@ const Loading = () => {
     return (
         <ScreenContainer>
             <PageHead title='Loading' />
-            <StartupScreen href='/signup' >
+            <StartupScreen href='/old-signup' >
                 <Image src={"/asset/spinner.svg"} alt="loading spinner" width={210} height={210} />
             </StartupScreen>
         </ScreenContainer>

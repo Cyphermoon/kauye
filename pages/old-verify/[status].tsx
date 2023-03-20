@@ -59,7 +59,7 @@ const Verify = () => {
         <ScreenContainer>
             <PageHead title='Sign Up' />
             <Screen className='px-6 relative splash-bg' >
-                <Header href='/verify' />
+                <Header href='/old-verify' />
 
                 <div className='text-center mt-20 space-y-7 flex flex-col items-center'>
 
@@ -70,7 +70,7 @@ const Verify = () => {
 
                 </div>
 
-                <BottomButton href='/verify' title='Proceed' />
+                <BottomButton href='/old-verify' title='Proceed' />
             </Screen>
         </ScreenContainer>
     )

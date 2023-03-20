@@ -17,9 +17,9 @@ const Verify = () => {
 
     const handleButtonClicked = () => {
         if (inputValue) {
-            route.push("/verify/success")
+            route.push("/old-verify/success")
         } else {
-            route.push("/verify/error")
+            route.push("/old-verify/error")
         }
     }
 
@@ -34,7 +34,7 @@ const Verify = () => {
 
                     <Image src="/asset/outlook.svg" alt='' width={62} height={49} />
                     <div className='space-y-3 w-full'>
-                        <Input placeholder='713-690' handleInputChange={setInputValue} />
+                        <Input type='tel' placeholder='713-690' handleInputChange={setInputValue} />
 
                         <div className='space-x-2'>
                             <span className='inline-block text-xs'>{"Didn't"} get the verification code?</span>

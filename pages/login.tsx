@@ -1,13 +1,12 @@
 import PageHead from '@/components/common/PageHead'
 import Screen from '@/components/common/Screen'
 import ScreenContainer from '@/components/common/ScreenContainer'
-import { Header, Select } from '@/components/Login'
+import { Header } from '@/components/Login'
+import Input from '@/components/Login/Input'
 import SignInOption from '@/components/Login/SignInOption'
-import { FcGoogle } from 'react-icons/fc'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
-import Input from '@/components/Login/Input'
+import { FcGoogle } from 'react-icons/fc'
 
 
 const SignUp = () => {

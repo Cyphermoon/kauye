@@ -1,6 +1,4 @@
 import Link from "next/link"
-import { useState } from "react"
-import { MdOutlineInfo } from "react-icons/md"
 
 interface HeaderProps {
     title: string
@@ -11,13 +9,12 @@ interface HeaderProps {
 export const Header = ({ title, href, urlLabel = "Sign Up" }: HeaderProps) => (
     <div className='flex items-start justify-between space-y-1 mt-2'>
         <div>
-            <p>Welcome to <span className='text-primary inline-block grow mb-3'>Kauye</span></p>
+            <p>Welcome to <Link href={"/"} className='text-primary inline-block grow mb-3'>KauyeLite</Link></p>
             <h2 className='uppercase font-medium text-[40px]'>{title}</h2>
         </div>
         <p className='text-[#8D8D8D] text-[13px] w-2/12'>Have an account <Link href={href} className='text-primary inline-block'>{urlLabel}</Link></p>
     </div>
 )
-
 
 
 export const Select = ({ className }: SelectProps) => {

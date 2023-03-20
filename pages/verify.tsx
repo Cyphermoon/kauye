@@ -3,9 +3,9 @@ import Screen from '@/components/common/Screen'
 import ScreenContainer from '@/components/common/ScreenContainer'
 import Header from '@/components/Verify'
 import OTPInput from '@/components/Verify/OtpInput'
-import { ImSpinner3 } from 'react-icons/im'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import { useState } from 'react'
+import { ImSpinner3 } from 'react-icons/im'
 
 
 const Verify = () => {
@@ -16,7 +16,7 @@ const Verify = () => {
             <Screen className='px-6 relative gradient-bg' >
                 <Header href='login' />
                 <div className='mt-6'>
-                    <p>Welcome to <span className='text-primary inline-block grow mb-4'>Kauye</span></p>
+                    <p>Welcome to <Link href={"/"} className='text-primary inline-block grow mb-4'>KauyeLite</Link></p>
                     <h2 className='uppercase font-medium leading-9 text-[40px] mb-8'>Verify Account</h2>
 
                     <div>

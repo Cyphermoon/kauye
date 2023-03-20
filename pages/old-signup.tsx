@@ -38,7 +38,7 @@ const SignUp = () => {
                     <Link className='inline-block text-primary text-xs' href="login">Sign in</Link>
                 </div>
 
-                <Link href={"login"} className='py-1 mx-6 absolute bottom-16 left-0 right-0 bg-primary text-center text-primary-50 rounded-3xl'>Sign up</Link>
+                <Link href={"old-verify"} className='py-1 mx-6 absolute bottom-16 left-0 right-0 bg-primary text-center text-primary-50 rounded-3xl'>Sign up</Link>
             </Screen>
         </ScreenContainer>
     )
