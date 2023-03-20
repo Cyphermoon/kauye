@@ -1,13 +1,18 @@
 import Link from "next/link"
 import { MdOutlineInfo } from "react-icons/md"
 
-export const Header = () => (
+interface HeaderProps {
+    title: string
+    href: string
+}
+
+export const Header = ({ title, href }: HeaderProps) => (
     <div className='flex items-start justify-between space-y-1 mt-2'>
         <div>
             <p>Welcome to <span className='text-primary inline-block grow mb-3'>Kauye</span></p>
-            <h2 className='uppercase font-medium text-[40px]'>Sign up</h2>
+            <h2 className='uppercase font-medium text-[40px]'>{title}</h2>
         </div>
-        <p className='text-[#8D8D8D] text-[13px] w-2/12'>Have an account <Link href={"verify"} className='text-primary inline-block'>Sign in</Link></p>
+        <p className='text-[#8D8D8D] text-[13px] w-2/12'>Have an account <Link href={href} className='text-primary inline-block'>Sign in</Link></p>
     </div>
 )
 

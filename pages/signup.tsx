@@ -12,7 +12,7 @@ const SignUp = () => {
         <ScreenContainer>
             <PageHead title='Sign In' />
             <Screen className='px-6 relative gradient-bg' >
-                <Header />
+                <Header title='sign up' href='/login' />
 
                 <form action="" className="space-y-4 mt-12">
                     <p className='text-base font-normal text-[#131313] text-left mb-9'>Enter your username or email address</p>
