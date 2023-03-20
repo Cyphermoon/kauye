@@ -7,7 +7,7 @@ interface Props {
 
 const Screen = ({ children, className }: Props) => {
     return (
-        <section className={`w-full p-4 bg-white lg:max-w-sm h-screen lg:h-[90%] lg:rounded-3xl overflow-y-scroll overflow-x-hidden lg:shadow-2xl ${className}`}>
+        <section className={`w-full p-4 bg-white md:max-w-sm h-screen md:h-[90%] md:rounded-3xl overflow-y-scroll overflow-x-hidden md:shadow-2xl ${className}`}>
             {children}
         </section>
     )

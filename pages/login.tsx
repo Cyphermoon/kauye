@@ -1,12 +1,13 @@
 import PageHead from '@/components/common/PageHead'
 import Screen from '@/components/common/Screen'
 import ScreenContainer from '@/components/common/ScreenContainer'
-import { Header, Input, Select } from '@/components/Login'
+import { Header, Select } from '@/components/Login'
 import SignInOption from '@/components/Login/SignInOption'
 import { FcGoogle } from 'react-icons/fc'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import Input from '@/components/Login/Input'
 
 
 const SignUp = () => {
@@ -27,10 +28,10 @@ const SignUp = () => {
                 </div>
 
                 <form action="" className="space-y-4 mt-12 text-right">
-                    <p className='text-base font-normal text-[#131313] text-left mb-6'>Enter your username or email address</p>
-                    <Input type='gmail' placeholder='example@gmail.com' />
+                    <p className='text-base font-normal text-[#131313] text-left mb-9'>Enter your username or email address</p>
+                    <Input type='email' placeholder='example@gmail.com' id='login_email' label='Email' />
 
-                    <Input type='password' placeholder='Password' />
+                    <Input type='password' placeholder='Password' id='login_password' label='Password' />
 
                     <Link href={"#"} className='inline-block'>Forgot Password?</Link>
                 </form>

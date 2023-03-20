@@ -6,7 +6,7 @@ interface Props {
 
 const ScreenContainer = ({ children }: Props) => {
   return (
-    <main className='w-screen h-screen bg-primary-50 grid place-items-stretch lg:place-items-center'>
+    <main className='w-screen h-screen bg-primary-50 grid place-items-stretch md:place-items-center'>
       {children}
     </main>
   )

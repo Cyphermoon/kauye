@@ -1,7 +1,8 @@
 import PageHead from '@/components/common/PageHead'
 import Screen from '@/components/common/Screen'
 import ScreenContainer from '@/components/common/ScreenContainer'
-import { Header, Input, Select } from '@/components/Login'
+import { Header, Select } from '@/components/Login'
+import Input from '@/components/Login/Input'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -16,14 +17,14 @@ const SignUp = () => {
 
                 <form action="" className="space-y-4 mt-12">
                     <p className='text-base font-normal text-[#131313] text-left mb-9'>Enter your username or email address</p>
-                    <Input type='gmail' placeholder='example@gmail.com' />
+                    <Input label='email' id='signup_email' type='gmail' placeholder='example@gmail.com' />
 
                     <div className='flex items-center justify-between space-x-3'>
                         <Select className="w-3/12 h-[50px]" />
-                        <Input type='text' placeholder='8039398213' className='grow h-full' />
+                        <Input label='number' id='signup_number' type='text' placeholder='8039398213' className='grow h-full' />
                     </div>
 
-                    <Input type='password' placeholder='Password' />
+                    <Input type='password' placeholder='Password' label='password' id='signup_password' />
 
                     <div className='flex w-full items-start space-x-1'>
                         <input type="checkbox" id='terms-and-condition' className='rounded-sm border-blue-500' />
